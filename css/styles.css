@@ -92,6 +92,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+
 .nav-menu .item:not(:last-child) {
   margin-right: 40px;
 }
@@ -99,6 +100,7 @@ img {
 .nav-menu .nav-link:focus {
   color: var(--accent-color);
 }
+
 .nav-link {
   color: var(--secondary-color-text);
 }
