@@ -100,6 +100,7 @@ img {
 .nav-menu .nav-link:hover,
 .nav-menu .nav-link:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link {
@@ -107,6 +108,7 @@ img {
 }
 .current {
   color: var(--accent-color);
+  
 }
 .current::after {
   position: absolute;
@@ -116,13 +118,14 @@ img {
     top: 68px;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 4px;
     border-radius: 2px;
-}
+} 
 /* Adress */
 .address .address-link:hover,
 .address .address-link:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address {
   font-style: normal;
@@ -192,7 +195,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   padding: 16px;
-  transition: background-color 0.25s ease-in-out;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-section .hero-buttom:hover,
 .hero-section .hero-buttom:focus {
@@ -361,6 +364,7 @@ img {
   height: 100%;
   background-color: var(--primary-brand);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .web-link:hover,
 .web-link:focus {
@@ -410,7 +414,8 @@ fill: var(--accent-color);
 .customers-link:hover,
 .customers-link:focus {
   color: var(--accent-color);
-  border-color: var(--accent-color)
+  border-color: var(--accent-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-svg {
   fill: currentColor;
@@ -525,6 +530,7 @@ margin-bottom: 16px;
 .social-link:hover,
 .social-link:focus {
   background-color: #31d0aa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-svg {
   fill: var(--secondary-background);
@@ -556,25 +562,42 @@ margin-bottom: 16px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal {
+.backdrop {
+  position: fixed;
   width: 408px;
-  min-height: 584px;
-  background-color: #FFFFFF;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   transform: scale(1) translate(-50%, -50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  
 }
 .modal-close-btn {
-    background-color: transparent;
-    border-radius: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
